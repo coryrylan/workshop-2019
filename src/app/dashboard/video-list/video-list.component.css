@@ -1,0 +1,24 @@
+button {
+  background: transparent;
+  border: 1px solid #ccc;
+  text-align: left;
+  border-bottom: 0;
+  cursor: pointer;
+  padding: 12px;
+}
+
+button:last-child {
+  border-bottom: 1px solid #ccc;
+}
+
+button:hover {
+  background-color: #d0d7e7;
+}
+
+img {
+  width: 100%;
+}
+
+.video-selected {
+  background-color: #acc1f0;
+}

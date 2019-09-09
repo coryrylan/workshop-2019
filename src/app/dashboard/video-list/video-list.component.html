@@ -1,0 +1,4 @@
+<button *ngFor="let video of videos" (click)="videoChange.next(video)" [ngClass]="{'video-selected': video.id === selectedVideo.id}">
+  <img [src]="'http://img.youtube.com/vi/' + video.id + '/0.jpg'" />
+  <h3>{{ video.title }} - {{ video.author }}</h3>
+</button>

@@ -1,1 +1,38 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+header {
+  padding: 18px 12px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 24px;
+}
+
+header a {
+  margin-right: 12px;
+}
+
+label, input {
+  display: block;
+}
+
+label {
+  margin: 12px 0 4px 0;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 24px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+}
