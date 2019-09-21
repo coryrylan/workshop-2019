@@ -1,5 +1,7 @@
 # Workshop
 
+Find the running example at [angular-workshop.web.app](https://angular-workshop.web.app/).
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.3.
 
 ## Development server
