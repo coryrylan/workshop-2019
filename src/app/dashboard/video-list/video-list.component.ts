@@ -8,7 +8,7 @@ import { Video } from './../../common/interfaces';
   styleUrls: ['./video-list.component.css']
 })
 export class VideoListComponent {
-  @Input() videos: Video[];
-  @Input() selectedVideo: Video;
+  @Input() videos?: Video[];
+  @Input() selectedVideo?: Video;
   @Output() videoChange = new EventEmitter<Video>();
 }

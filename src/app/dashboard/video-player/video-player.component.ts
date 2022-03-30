@@ -9,15 +9,15 @@ import { Video } from './../../common/interfaces';
   styleUrls: ['./video-player.component.css']
 })
 export class VideoPlayerComponent implements OnChanges {
-  @Input() video: Video;
-  videoUrl: SafeUrl;
+  @Input() video?: Video;
+  videoUrl?: SafeUrl;
 
   constructor(private domSanitizer: DomSanitizer) {}
 
-  ngOnChanges(changes: SimpleChanges) {
-    if (changes.video && changes.video.currentValue) {
-      const video = changes.video.currentValue;
-      this.videoUrl = this.domSanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' + video.id);
+  ngOnChanges({video}: SimpleChanges) {
+    if (video && video.currentValue) {
+      const currentVideo = video.currentValue;
+      this.videoUrl = this.domSanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' + currentVideo.id);
     }
   }
 }

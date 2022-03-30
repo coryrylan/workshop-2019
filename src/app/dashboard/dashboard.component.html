@@ -2,6 +2,6 @@
 <input type="search" id="search" [formControl]="search" />
 
 <section>
-  <app-video-list [videos]="filteredVideos | async" [selectedVideo]="selectedVideo" (videoChange)="selectedVideo = $event"></app-video-list>
+  <app-video-list [videos]="(filteredVideos | async) ?? []" [selectedVideo]="selectedVideo" (videoChange)="selectedVideo = $event"></app-video-list>
   <app-video-player [video]="selectedVideo"></app-video-player>
 </section>

@@ -14,13 +14,13 @@ import { Video } from '../common/interfaces';
 export class DashboardComponent {
   search = new FormControl('');
   filteredVideos: Observable<Video[]>;
-  selectedVideo: Video;
+  selectedVideo?: Video;
 
   constructor(private videoService: VideoService) {
     const loadedVideos = this.videoService.loadVideos().pipe(tap(videos => this.selectedVideo = videos[0]));
     const searchChanges = this.search.valueChanges.pipe(startWith(this.search.value));
 
-    this.filteredVideos = combineLatest(loadedVideos, searchChanges).pipe(
+    this.filteredVideos = combineLatest([loadedVideos, searchChanges]).pipe(
       map(([videos, query]) => filterVideos(videos, query)),
     );
   }
